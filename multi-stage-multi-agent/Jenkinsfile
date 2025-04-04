@@ -6,11 +6,8 @@ pipeline {
         docker { image 'maven:3.8.1-adoptopenjdk-11' }
       }
       steps {
-	dir('/root/Jenkins-Zero-To-Hero/multi-stage-multi-agent') { 
 	  sh 'mvn clean'
 	}
-      }
-
     }
     stage('Front-end') {
       agent {
